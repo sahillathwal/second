@@ -60,7 +60,7 @@ class SecondApiClient {
     required TokenProvider tokenProvider,
     http.Client? httpClient,
   }) : this._(
-          baseUrl: 'http://localhost:8080',
+          baseUrl: 'http://10.1.92.137:80',
           httpClient: httpClient,
           tokenProvider: tokenProvider,
         );
