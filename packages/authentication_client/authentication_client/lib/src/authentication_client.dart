@@ -1,3 +1,5 @@
+// ignore_for_file: doc_directive_has_extra_arguments
+
 import 'dart:async';
 
 import 'package:authentication_client/authentication_client.dart';

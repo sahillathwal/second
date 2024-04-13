@@ -16,6 +16,7 @@ enum BlockActionType {
 /// {@macro block_action}
 /// A class which represents an action that can occur
 /// when interacting with a block.
+// ignore: doc_directive_missing_opening_tag
 /// {@endtemplate}
 abstract class BlockAction {
   /// {@macro block_action}

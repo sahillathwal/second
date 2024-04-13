@@ -1,3 +1,5 @@
+// ignore_for_file: doc_directive_missing_closing_tag
+
 import 'dart:async';
 
 import 'package:authentication_client/authentication_client.dart';
