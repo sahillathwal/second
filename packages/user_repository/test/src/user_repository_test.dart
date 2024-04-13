@@ -4,9 +4,9 @@ import 'dart:async';
 
 import 'package:authentication_client/authentication_client.dart';
 import 'package:deep_link_client/deep_link_client.dart';
-import 'package:second_api/client.dart' as api;
 import 'package:mocktail/mocktail.dart';
 import 'package:package_info_client/package_info_client.dart';
+import 'package:second_api/client.dart' as api;
 import 'package:test/test.dart';
 import 'package:user_repository/user_repository.dart';
 

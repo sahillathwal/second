@@ -2,9 +2,9 @@
 import 'dart:async';
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:second/login/login.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second/login/login.dart';
 import 'package:user_repository/user_repository.dart';
 
 class MockUserRepository extends Mock implements UserRepository {}
@@ -79,7 +79,7 @@ void main() {
         act: (bloc) => incomingEmailLinksController.add(validEmailLink),
         expect: () => const <LoginWithEmailLinkState>[
           LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.loading),
-          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.failure)
+          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.failure),
         ],
       );
 
@@ -95,7 +95,7 @@ void main() {
             incomingEmailLinksController.add(emailLinkWithoutContinueUrl),
         expect: () => const <LoginWithEmailLinkState>[
           LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.loading),
-          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.failure)
+          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.failure),
         ],
       );
 
@@ -111,7 +111,7 @@ void main() {
             incomingEmailLinksController.add(emailLinkWithInvalidContinueUrl),
         expect: () => const <LoginWithEmailLinkState>[
           LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.loading),
-          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.failure)
+          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.failure),
         ],
       );
 
@@ -133,7 +133,7 @@ void main() {
         act: (bloc) => incomingEmailLinksController.add(validEmailLink),
         expect: () => const <LoginWithEmailLinkState>[
           LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.loading),
-          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.failure)
+          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.failure),
         ],
       );
 
@@ -149,7 +149,7 @@ void main() {
         act: (bloc) => incomingEmailLinksController.add(validEmailLink),
         expect: () => const <LoginWithEmailLinkState>[
           LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.loading),
-          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.success)
+          LoginWithEmailLinkState(status: LoginWithEmailLinkStatus.success),
         ],
       );
 

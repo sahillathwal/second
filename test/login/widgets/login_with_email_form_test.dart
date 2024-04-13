@@ -5,12 +5,12 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:second/login/login.dart';
-import 'package:second/magic_link_prompt/magic_link_prompt.dart';
-import 'package:second/terms_of_service/terms_of_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:form_inputs/form_inputs.dart';
 import 'package:mockingjay/mockingjay.dart';
+import 'package:second/login/login.dart';
+import 'package:second/magic_link_prompt/magic_link_prompt.dart';
+import 'package:second/terms_of_service/terms_of_service.dart';
 import 'package:user_repository/user_repository.dart';
 
 import '../../helpers/helpers.dart';
@@ -132,7 +132,7 @@ void main() {
             loginBloc,
             Stream.fromIterable(const <LoginState>[
               LoginState(status: FormzSubmissionStatus.inProgress),
-              LoginState(status: FormzSubmissionStatus.failure)
+              LoginState(status: FormzSubmissionStatus.failure),
             ]),
           );
           await tester.pumpApp(
@@ -226,7 +226,7 @@ void main() {
           Stream.fromIterable(
             <LoginState>[
               const LoginState(status: FormzSubmissionStatus.inProgress),
-              const LoginState(status: FormzSubmissionStatus.success)
+              const LoginState(status: FormzSubmissionStatus.success),
             ],
           ),
           initialState: const LoginState(),

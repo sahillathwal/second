@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:second_api/client.dart';
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
+import 'package:second_api/client.dart';
 import 'package:test/test.dart';
 
 class MockHttpClient extends Mock implements http.Client {}
@@ -801,7 +801,7 @@ void main() {
               name: SubscriptionPlan.premium,
               cost: SubscriptionCost(annual: 4200, monthly: 42),
               benefits: ['benefit'],
-            )
+            ),
           ],
         );
         when(() => httpClient.get(any())).thenAnswer(

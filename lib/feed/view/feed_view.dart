@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_blocks/news_blocks.dart';
 import 'package:second/categories/categories.dart';
 import 'package:second/feed/feed.dart';
-import 'package:news_blocks/news_blocks.dart';
 
 class FeedView extends StatelessWidget {
   const FeedView({super.key});

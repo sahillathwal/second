@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:second/ads/ads.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' as ads;
+import 'package:second/ads/ads.dart';
 
 class FakeInterstitialAd extends Fake implements ads.InterstitialAd {}
 

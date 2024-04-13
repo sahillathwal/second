@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:second/feed/feed.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:news_blocks/news_blocks.dart';
+import 'package:second/feed/feed.dart';
 
 void main() {
   group('FeedState', () {

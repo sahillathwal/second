@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart' hide Spacer;
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_blocks/news_blocks.dart';
+import 'package:news_blocks_ui/news_blocks_ui.dart';
 import 'package:second/app/app.dart';
 import 'package:second/article/article.dart';
 import 'package:second/categories/categories.dart';
 import 'package:second/l10n/l10n.dart';
 import 'package:second/newsletter/newsletter.dart';
-import 'package:news_blocks/news_blocks.dart';
-import 'package:news_blocks_ui/news_blocks_ui.dart';
 
 class CategoryFeedItem extends StatelessWidget {
   const CategoryFeedItem({required this.block, super.key});

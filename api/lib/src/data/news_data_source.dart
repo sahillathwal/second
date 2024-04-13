@@ -1,5 +1,5 @@
-import 'package:second_api/api.dart';
 import 'package:news_blocks/news_blocks.dart';
+import 'package:second_api/api.dart';
 
 /// {@template news_data_source}
 /// An interface for a news content data source.

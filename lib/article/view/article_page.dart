@@ -3,12 +3,12 @@ import 'package:article_repository/article_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_blocks_ui/news_blocks_ui.dart';
 import 'package:second/ads/ads.dart';
 import 'package:second/app/app.dart';
 import 'package:second/article/article.dart';
 import 'package:second/l10n/l10n.dart';
 import 'package:second/subscriptions/subscriptions.dart';
-import 'package:news_blocks_ui/news_blocks_ui.dart';
 import 'package:share_launcher/share_launcher.dart';
 
 /// The supported behaviors for interstitial ad.
@@ -126,7 +126,7 @@ class ArticleView extends StatelessWidget {
                             .add(ShareRequested(uri: uri)),
                       ),
                     ),
-                  if (!isSubscriber) const ArticleSubscribeButton()
+                  if (!isSubscriber) const ArticleSubscribeButton(),
                 ],
               ),
               body: ArticleThemeOverride(

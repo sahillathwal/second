@@ -12,7 +12,7 @@ CurrentUserResponse _$CurrentUserResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$CurrentUserResponseToJson(
-        CurrentUserResponse instance) =>
+        CurrentUserResponse instance,) =>
     <String, dynamic>{
       'user': instance.user.toJson(),
     };

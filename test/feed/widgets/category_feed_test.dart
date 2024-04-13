@@ -4,11 +4,11 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:second/feed/feed.dart';
-import 'package:second/network_error/network_error.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:news_blocks/news_blocks.dart';
+import 'package:second/feed/feed.dart';
+import 'package:second/network_error/network_error.dart';
 
 import '../../helpers/helpers.dart';
 
@@ -26,7 +26,7 @@ void main() {
     Category.top: [
       DividerHorizontalBlock(),
       SpacerBlock(spacing: Spacing.medium),
-    ]
+    ],
   };
 
   setUp(() {
@@ -299,7 +299,7 @@ void main() {
                 status: FeedStatus.populated,
                 feed: feed,
                 hasMoreNews: hasMoreNews,
-              )
+              ),
             ]),
           );
 
@@ -328,7 +328,7 @@ void main() {
               hasMoreNews: {
                 category: false,
               },
-            )
+            ),
           ]),
         );
 
@@ -351,7 +351,7 @@ void main() {
               status: FeedStatus.populated,
               feed: feed,
               hasMoreNews: hasMoreNews,
-            )
+            ),
           ]),
         );
 

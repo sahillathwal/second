@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:second/login/login.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:second/login/login.dart';
 
 void main() {
   group('LoginEvent', () {

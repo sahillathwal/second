@@ -7,6 +7,10 @@ import 'package:app_ui/app_ui.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
+import 'package:news_blocks/news_blocks.dart';
+import 'package:news_repository/news_repository.dart';
 import 'package:second/app/app.dart';
 import 'package:second/categories/categories.dart';
 import 'package:second/feed/feed.dart';
@@ -15,10 +19,6 @@ import 'package:second/login/login.dart';
 import 'package:second/navigation/navigation.dart';
 import 'package:second/search/search.dart';
 import 'package:second/user_profile/user_profile.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:news_blocks/news_blocks.dart';
-import 'package:news_repository/news_repository.dart';
 
 import '../../helpers/helpers.dart';
 

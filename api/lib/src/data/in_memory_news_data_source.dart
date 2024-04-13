@@ -1,9 +1,9 @@
 import 'dart:math' as math;
 
 import 'package:collection/collection.dart';
+import 'package:news_blocks/news_blocks.dart';
 import 'package:second_api/api.dart';
 import 'package:second_api/src/data/models/models.dart';
-import 'package:news_blocks/news_blocks.dart';
 
 part 'static_news_data.dart';
 

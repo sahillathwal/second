@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:second_api/api.dart';
 import 'package:news_blocks/news_blocks.dart';
+import 'package:second_api/api.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:second/app/app.dart';
 import 'package:second/home/home.dart';
 import 'package:second/onboarding/onboarding.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('onGenerateAppViewPages', () {
@@ -14,7 +14,7 @@ void main() {
             (p) => p.child,
             'child',
             isA<OnboardingPage>(),
-          )
+          ),
         ],
       );
     });
@@ -27,7 +27,7 @@ void main() {
             (p) => p.child,
             'child',
             isA<HomePage>(),
-          )
+          ),
         ],
       );
     });
@@ -40,7 +40,7 @@ void main() {
             (p) => p.child,
             'child',
             isA<HomePage>(),
-          )
+          ),
         ],
       );
     });

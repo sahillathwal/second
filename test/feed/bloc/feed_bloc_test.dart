@@ -2,11 +2,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:second/feed/feed.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:news_blocks/news_blocks.dart';
 import 'package:news_repository/news_repository.dart';
+import 'package:second/feed/feed.dart';
 
 import '../../helpers/helpers.dart';
 
@@ -118,7 +118,7 @@ void main() {
               ..addAll({
                 Category.entertainment: false,
               }),
-          )
+          ),
         ],
       );
 

@@ -3,12 +3,12 @@
 
 import 'dart:async';
 
-import 'package:second_api/client.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:notifications_client/notifications_client.dart';
 import 'package:notifications_repository/notifications_repository.dart';
 import 'package:permission_client/permission_client.dart';
+import 'package:second_api/client.dart';
 import 'package:storage/storage.dart';
 
 class MockPermissionClient extends Mock implements PermissionClient {}

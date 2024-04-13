@@ -4,11 +4,6 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:second/ads/ads.dart';
-import 'package:second/analytics/analytics.dart';
-import 'package:second/app/app.dart';
-import 'package:second/l10n/l10n.dart';
-import 'package:second/theme_selector/theme_selector.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
 import 'package:mockingjay/mockingjay.dart'
@@ -16,6 +11,11 @@ import 'package:mockingjay/mockingjay.dart'
 import 'package:mocktail/mocktail.dart';
 import 'package:news_repository/news_repository.dart';
 import 'package:notifications_repository/notifications_repository.dart';
+import 'package:second/ads/ads.dart';
+import 'package:second/analytics/analytics.dart';
+import 'package:second/app/app.dart';
+import 'package:second/l10n/l10n.dart';
+import 'package:second/theme_selector/theme_selector.dart';
 import 'package:user_repository/user_repository.dart';
 
 class MockAppBloc extends MockBloc<AppEvent, AppState> implements AppBloc {
@@ -134,7 +134,7 @@ extension AppTester on WidgetTester {
                     ),
             ),
             navigatorObservers: [
-              if (navigatorObserver != null) navigatorObserver
+              if (navigatorObserver != null) navigatorObserver,
             ],
           ),
         ),

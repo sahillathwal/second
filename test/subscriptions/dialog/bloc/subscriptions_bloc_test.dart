@@ -3,10 +3,10 @@
 import 'dart:async';
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:second/subscriptions/subscriptions.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second/subscriptions/subscriptions.dart';
 import 'package:user_repository/user_repository.dart';
 
 import '../../../app/view/app_test.dart';

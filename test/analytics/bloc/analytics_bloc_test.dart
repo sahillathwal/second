@@ -4,9 +4,9 @@ import 'dart:async';
 
 import 'package:analytics_repository/analytics_repository.dart' as analytics;
 import 'package:bloc_test/bloc_test.dart';
-import 'package:second/analytics/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second/analytics/analytics.dart';
 import 'package:user_repository/user_repository.dart';
 
 class MockAnalyticsRepository extends Mock

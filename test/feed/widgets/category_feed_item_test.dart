@@ -5,15 +5,15 @@ import 'package:article_repository/article_repository.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart' hide Spacer;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:second/article/article.dart';
-import 'package:second/categories/categories.dart';
-import 'package:second/feed/feed.dart';
-import 'package:second/newsletter/newsletter.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:mocktail_image_network/mocktail_image_network.dart';
 import 'package:news_blocks/news_blocks.dart';
 import 'package:news_blocks_ui/news_blocks_ui.dart';
+import 'package:second/article/article.dart';
+import 'package:second/categories/categories.dart';
+import 'package:second/feed/feed.dart';
+import 'package:second/newsletter/newsletter.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 import '../../helpers/helpers.dart';
@@ -199,7 +199,7 @@ void main() {
             publishedAt: DateTime(2022, 3, 12),
             imageUrl: 'imageUrl',
             title: 'title',
-          )
+          ),
         ],
       );
       await mockNetworkImages(() async {
@@ -361,7 +361,7 @@ void main() {
               imageUrl: 'imageUrl',
               title: 'title',
               action: NavigateToArticleAction(articleId: articleId),
-            )
+            ),
           ],
         );
 
@@ -513,7 +513,7 @@ void main() {
               imageUrl: 'imageUrl',
               title: 'title',
               action: NavigateToVideoArticleAction(articleId: articleId),
-            )
+            ),
           ],
         );
 

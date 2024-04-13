@@ -1,12 +1,12 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
+import 'package:intl/intl.dart';
 import 'package:second/app/app.dart';
 import 'package:second/l10n/l10n.dart';
 import 'package:second/login/login.dart';
 import 'package:second/subscriptions/subscriptions.dart';
-import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
-import 'package:intl/intl.dart';
 
 class SubscriptionCard extends StatelessWidget {
   const SubscriptionCard({
@@ -131,7 +131,7 @@ class SubscriptionCard extends StatelessWidget {
                     if (isLoggedIn)
                       Text(l10n.subscriptionPurchaseButton)
                     else
-                      Text(l10n.subscriptionUnauthenticatedPurchaseButton)
+                      Text(l10n.subscriptionUnauthenticatedPurchaseButton),
                   ],
                 ),
               ),

@@ -5,13 +5,13 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
+import 'package:news_blocks/news_blocks.dart';
 import 'package:second/ads/ads.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/article/article.dart';
 import 'package:second/network_error/network_error.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:news_blocks/news_blocks.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 import '../../helpers/helpers.dart';
@@ -436,7 +436,7 @@ void main() {
                 status: ArticleStatus.populated,
                 content: content,
                 hasMoreContent: true,
-              )
+              ),
             ]),
           );
 
@@ -466,7 +466,7 @@ void main() {
               status: ArticleStatus.populated,
               content: content,
               hasMoreContent: false,
-            )
+            ),
           ]),
         );
 
@@ -490,7 +490,7 @@ void main() {
               status: ArticleStatus.populated,
               content: content,
               hasMoreContent: true,
-            )
+            ),
           ]),
           initialState: ArticleState.initial(),
         );
@@ -516,7 +516,7 @@ void main() {
               status: ArticleStatus.loading,
               content: content,
               hasMoreContent: true,
-            )
+            ),
           ]),
           initialState: ArticleState.initial(),
         );

@@ -14,7 +14,7 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
 
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'id': instance.id,
-      'subscription': _$SubscriptionPlanEnumMap[instance.subscription]!,
+      'subscription': _$SubscriptionPlanEnumMap[instance.subscription],
     };
 
 const _$SubscriptionPlanEnumMap = {

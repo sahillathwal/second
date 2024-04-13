@@ -2,11 +2,11 @@ import 'package:app_ui/app_ui.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:form_inputs/form_inputs.dart';
 import 'package:second/l10n/l10n.dart';
 import 'package:second/login/login.dart';
 import 'package:second/magic_link_prompt/magic_link_prompt.dart';
 import 'package:second/terms_of_service/terms_of_service.dart';
-import 'package:form_inputs/form_inputs.dart';
 
 class LoginWithEmailForm extends StatelessWidget {
   const LoginWithEmailForm({super.key});

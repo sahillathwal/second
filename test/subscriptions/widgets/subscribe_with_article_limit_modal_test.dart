@@ -3,16 +3,16 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart' as ads;
+import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
+import 'package:mockingjay/mockingjay.dart';
 import 'package:second/ads/ads.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/app/app.dart';
 import 'package:second/article/article.dart';
 import 'package:second/login/login.dart';
 import 'package:second/subscriptions/subscriptions.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart' as ads;
-import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
-import 'package:mockingjay/mockingjay.dart';
 import 'package:user_repository/user_repository.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 

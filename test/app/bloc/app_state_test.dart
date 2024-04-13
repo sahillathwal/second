@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable, prefer_const_constructors
-import 'package:second/app/app.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second/app/app.dart';
 import 'package:user_repository/user_repository.dart';
 
 class MockUser extends Mock implements User {}

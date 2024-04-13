@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:second_api/client.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:second_api/client.dart';
 
 part 'user.g.dart';
 

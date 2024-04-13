@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
-import 'package:second_api/client.dart';
 import 'package:notifications_client/notifications_client.dart';
 import 'package:permission_client/permission_client.dart';
+import 'package:second_api/client.dart';
 import 'package:storage/storage.dart';
 
 part 'notifications_storage.dart';

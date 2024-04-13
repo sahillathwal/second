@@ -2,10 +2,10 @@
 
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
-import 'package:second/app/app.dart';
-import 'package:second/subscriptions/subscriptions.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockingjay/mockingjay.dart';
+import 'package:second/app/app.dart';
+import 'package:second/subscriptions/subscriptions.dart';
 
 import '../../helpers/helpers.dart';
 

@@ -1,5 +1,5 @@
-import 'package:second/analytics/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:second/analytics/analytics.dart';
 
 void main() {
   group('AnalyticsState', () {

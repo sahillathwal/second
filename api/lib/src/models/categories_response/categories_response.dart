@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:second_api/api.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:second_api/api.dart';
 
 part 'categories_response.g.dart';
 

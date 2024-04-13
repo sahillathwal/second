@@ -4,10 +4,10 @@
 import 'package:article_repository/article_repository.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:clock/clock.dart';
-import 'package:second/article/article.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:news_blocks/news_blocks.dart';
+import 'package:second/article/article.dart';
 import 'package:share_launcher/share_launcher.dart';
 
 import '../../helpers/helpers.dart';
@@ -145,7 +145,7 @@ void main() {
             contentTotalCount: articleResponse.totalCount,
             relatedArticles: relatedArticlesResponse.relatedArticles,
             hasMoreContent: false,
-          )
+          ),
         ],
       );
 

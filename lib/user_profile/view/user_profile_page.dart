@@ -2,6 +2,7 @@ import 'package:app_ui/app_ui.dart'
     show AppBackButton, AppButton, AppColors, AppSpacing, AppSwitch, Assets;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notifications_repository/notifications_repository.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/app/app.dart';
 import 'package:second/l10n/l10n.dart';
@@ -9,7 +10,6 @@ import 'package:second/notification_preferences/notification_preferences.dart';
 import 'package:second/subscriptions/subscriptions.dart';
 import 'package:second/terms_of_service/terms_of_service.dart';
 import 'package:second/user_profile/user_profile.dart';
-import 'package:notifications_repository/notifications_repository.dart';
 import 'package:user_repository/user_repository.dart';
 
 class UserProfilePage extends StatelessWidget {

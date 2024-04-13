@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:news_blocks/news_blocks.dart';
 import 'package:second_api/api.dart';
 import 'package:second_api/src/data/in_memory_news_data_source.dart';
-import 'package:news_blocks/news_blocks.dart';
 import 'package:test/test.dart';
 
 class MyNewsDataSource extends NewsDataSource {

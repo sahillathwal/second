@@ -1,10 +1,10 @@
 import 'package:app_ui/app_ui.dart' show AppColors, AppSpacing;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart' show toBeginningOfSentenceCase;
 import 'package:second/categories/categories.dart';
 import 'package:second/home/home.dart';
 import 'package:second/l10n/l10n.dart';
-import 'package:intl/intl.dart' show toBeginningOfSentenceCase;
 
 class NavDrawerSections extends StatelessWidget {
   const NavDrawerSections({super.key});
@@ -33,7 +33,7 @@ class NavDrawerSections extends StatelessWidget {
                     .read<CategoriesBloc>()
                     .add(CategorySelected(category: category));
               },
-            )
+            ),
         ],
       ],
     );

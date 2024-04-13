@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:authentication_client/authentication_client.dart';
 import 'package:deep_link_client/deep_link_client.dart';
 import 'package:equatable/equatable.dart';
-import 'package:second_api/client.dart' hide User;
 import 'package:package_info_client/package_info_client.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:second_api/client.dart' hide User;
 import 'package:storage/storage.dart';
 import 'package:user_repository/user_repository.dart';
 

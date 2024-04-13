@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:second_api/client.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:notifications_repository/notifications_repository.dart';
+import 'package:second_api/client.dart';
 import 'package:storage/storage.dart';
 import 'package:test/test.dart';
 

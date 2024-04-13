@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:dart_frog/dart_frog.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:second_api/api.dart';
 import 'package:second_api/src/data/in_memory_news_data_source.dart';
-import 'package:mocktail/mocktail.dart';
 import 'package:test/test.dart';
 
 import '../../../routes/api/v1/search/relevant.dart' as route;

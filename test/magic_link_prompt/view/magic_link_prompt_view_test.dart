@@ -1,7 +1,7 @@
 import 'package:email_launcher/email_launcher.dart';
-import 'package:second/magic_link_prompt/magic_link_prompt.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second/magic_link_prompt/magic_link_prompt.dart';
 
 import '../../helpers/helpers.dart';
 

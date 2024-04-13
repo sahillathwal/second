@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:second/login/login.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:form_inputs/form_inputs.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second/login/login.dart';
 import 'package:user_repository/user_repository.dart';
 
 class MockUserRepository extends Mock implements UserRepository {}
@@ -104,7 +104,7 @@ void main() {
             status: FormzSubmissionStatus.success,
             email: validEmail,
             valid: true,
-          )
+          ),
         ],
       );
 
@@ -131,7 +131,7 @@ void main() {
             status: FormzSubmissionStatus.failure,
             email: validEmail,
             valid: true,
-          )
+          ),
         ],
       );
     });
@@ -153,7 +153,7 @@ void main() {
         act: (bloc) => bloc.add(LoginGoogleSubmitted()),
         expect: () => const <LoginState>[
           LoginState(status: FormzSubmissionStatus.inProgress),
-          LoginState(status: FormzSubmissionStatus.success)
+          LoginState(status: FormzSubmissionStatus.success),
         ],
       );
 
@@ -169,7 +169,7 @@ void main() {
         act: (bloc) => bloc.add(LoginGoogleSubmitted()),
         expect: () => const <LoginState>[
           LoginState(status: FormzSubmissionStatus.inProgress),
-          LoginState(status: FormzSubmissionStatus.failure)
+          LoginState(status: FormzSubmissionStatus.failure),
         ],
       );
 
@@ -207,7 +207,7 @@ void main() {
         act: (bloc) => bloc.add(LoginTwitterSubmitted()),
         expect: () => const <LoginState>[
           LoginState(status: FormzSubmissionStatus.inProgress),
-          LoginState(status: FormzSubmissionStatus.success)
+          LoginState(status: FormzSubmissionStatus.success),
         ],
       );
 
@@ -223,7 +223,7 @@ void main() {
         act: (bloc) => bloc.add(LoginTwitterSubmitted()),
         expect: () => const <LoginState>[
           LoginState(status: FormzSubmissionStatus.inProgress),
-          LoginState(status: FormzSubmissionStatus.failure)
+          LoginState(status: FormzSubmissionStatus.failure),
         ],
       );
 
@@ -263,7 +263,7 @@ void main() {
         act: (bloc) => bloc.add(LoginFacebookSubmitted()),
         expect: () => const <LoginState>[
           LoginState(status: FormzSubmissionStatus.inProgress),
-          LoginState(status: FormzSubmissionStatus.success)
+          LoginState(status: FormzSubmissionStatus.success),
         ],
       );
 
@@ -279,7 +279,7 @@ void main() {
         act: (bloc) => bloc.add(LoginFacebookSubmitted()),
         expect: () => const <LoginState>[
           LoginState(status: FormzSubmissionStatus.inProgress),
-          LoginState(status: FormzSubmissionStatus.failure)
+          LoginState(status: FormzSubmissionStatus.failure),
         ],
       );
 
@@ -319,7 +319,7 @@ void main() {
         act: (bloc) => bloc.add(LoginAppleSubmitted()),
         expect: () => const <LoginState>[
           LoginState(status: FormzSubmissionStatus.inProgress),
-          LoginState(status: FormzSubmissionStatus.success)
+          LoginState(status: FormzSubmissionStatus.success),
         ],
       );
 
@@ -335,7 +335,7 @@ void main() {
         act: (bloc) => bloc.add(LoginAppleSubmitted()),
         expect: () => const <LoginState>[
           LoginState(status: FormzSubmissionStatus.inProgress),
-          LoginState(status: FormzSubmissionStatus.failure)
+          LoginState(status: FormzSubmissionStatus.failure),
         ],
       );
     });

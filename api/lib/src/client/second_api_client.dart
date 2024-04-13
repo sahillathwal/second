@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:second_api/client.dart';
 import 'package:http/http.dart' as http;
+import 'package:second_api/client.dart';
 
 /// {@template second_api_malformed_response}
 /// An exception thrown when there is a problem decoded the response body.

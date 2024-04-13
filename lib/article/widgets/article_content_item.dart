@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart' hide Image, Spacer;
+import 'package:news_blocks/news_blocks.dart';
+import 'package:news_blocks_ui/news_blocks_ui.dart';
 import 'package:second/article/article.dart';
 import 'package:second/l10n/l10n.dart';
 import 'package:second/newsletter/newsletter.dart';
 import 'package:second/slideshow/slideshow.dart';
-import 'package:news_blocks/news_blocks.dart';
-import 'package:news_blocks_ui/news_blocks_ui.dart';
 
 class ArticleContentItem extends StatelessWidget {
   const ArticleContentItem({

@@ -3,8 +3,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:second/feed/feed.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:second/feed/feed.dart';
 
 import '../../helpers/helpers.dart';
 

@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:authentication_client/authentication_client.dart';
-import 'package:second_api/client.dart' hide User;
-import 'package:second_api/client.dart' as api;
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second_api/client.dart' as api;
+import 'package:second_api/client.dart' hide User;
 import 'package:test/test.dart';
 
 class MockSecondApiClient extends Mock
@@ -471,7 +471,7 @@ void main() {
             emitsInOrder(
               <Matcher>[
                 isA<PurchasePurchased>(),
-                emitsError(isA<PurchaseFailed>())
+                emitsError(isA<PurchaseFailed>()),
               ],
             ),
           );
@@ -550,7 +550,7 @@ void main() {
                 purchaseDetails.copyWith(
                   status: PurchaseStatus.pending,
                   pendingCompletePurchase: true,
-                )
+                ),
               ],
             ]),
           );
@@ -613,7 +613,7 @@ void main() {
                 purchaseDetails.copyWith(
                   status: PurchaseStatus.pending,
                   pendingCompletePurchase: true,
-                )
+                ),
               ],
             ]),
           );

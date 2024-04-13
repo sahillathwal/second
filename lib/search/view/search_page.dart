@@ -1,10 +1,10 @@
 import 'package:app_ui/app_ui.dart' hide Assets;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_repository/news_repository.dart';
 import 'package:second/feed/feed.dart';
 import 'package:second/l10n/l10n.dart';
 import 'package:second/search/search.dart';
-import 'package:news_repository/news_repository.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -105,7 +105,7 @@ class _SearchViewState extends State<SearchView> {
             ),
             ...state.articles.map<Widget>(
               (newsBlock) => CategoryFeedItem(block: newsBlock),
-            )
+            ),
           ],
         );
       },

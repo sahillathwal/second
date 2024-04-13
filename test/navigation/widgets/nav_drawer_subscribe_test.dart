@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:app_ui/app_ui.dart';
-import 'package:second/navigation/navigation.dart';
-import 'package:second/subscriptions/subscriptions.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second/navigation/navigation.dart';
+import 'package:second/subscriptions/subscriptions.dart';
 
 import '../../helpers/helpers.dart';
 

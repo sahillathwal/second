@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:flutter_test/flutter_test.dart';
 import 'package:second/search/search.dart';
 import 'package:second_api/client.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('SearchState', () {

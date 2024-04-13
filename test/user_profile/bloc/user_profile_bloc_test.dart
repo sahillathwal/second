@@ -4,11 +4,11 @@ import 'dart:async';
 
 import 'package:authentication_client/authentication_client.dart';
 import 'package:bloc_test/bloc_test.dart';
-import 'package:second/user_profile/user_profile.dart';
-import 'package:second_api/client.dart' hide User;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:notifications_repository/notifications_repository.dart';
+import 'package:second/user_profile/user_profile.dart';
+import 'package:second_api/client.dart' hide User;
 import 'package:user_repository/user_repository.dart';
 
 class MockUserRepository extends Mock implements UserRepository {}

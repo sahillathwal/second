@@ -1,7 +1,7 @@
 import 'package:analytics_repository/analytics_repository.dart' as analytics;
-import 'package:second/analytics/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:second/analytics/analytics.dart';
 import 'package:user_repository/user_repository.dart';
 
 class MockUser extends Mock implements User {}
