@@ -17,7 +17,7 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) => Subscription(
 Map<String, dynamic> _$SubscriptionToJson(Subscription instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'name': _$SubscriptionPlanEnumMap[instance.name]!,
+      'name': _$SubscriptionPlanEnumMap[instance.name],
       'cost': instance.cost.toJson(),
       'benefits': instance.benefits,
     };

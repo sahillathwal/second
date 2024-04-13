@@ -7,7 +7,8 @@ part of 'related_articles_response.dart';
 // **************************************************************************
 
 RelatedArticlesResponse _$RelatedArticlesResponseFromJson(
-        Map<String, dynamic> json) =>
+  Map<String, dynamic> json,
+) =>
     RelatedArticlesResponse(
       relatedArticles:
           const NewsBlocksConverter().fromJson(json['relatedArticles'] as List),
@@ -15,7 +16,8 @@ RelatedArticlesResponse _$RelatedArticlesResponseFromJson(
     );
 
 Map<String, dynamic> _$RelatedArticlesResponseToJson(
-        RelatedArticlesResponse instance) =>
+  RelatedArticlesResponse instance,
+) =>
     <String, dynamic>{
       'relatedArticles':
           const NewsBlocksConverter().toJson(instance.relatedArticles),

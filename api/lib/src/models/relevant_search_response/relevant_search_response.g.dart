@@ -7,7 +7,8 @@ part of 'relevant_search_response.dart';
 // **************************************************************************
 
 RelevantSearchResponse _$RelevantSearchResponseFromJson(
-        Map<String, dynamic> json) =>
+  Map<String, dynamic> json,
+) =>
     RelevantSearchResponse(
       articles: const NewsBlocksConverter().fromJson(json['articles'] as List),
       topics:
@@ -15,7 +16,8 @@ RelevantSearchResponse _$RelevantSearchResponseFromJson(
     );
 
 Map<String, dynamic> _$RelevantSearchResponseToJson(
-        RelevantSearchResponse instance) =>
+  RelevantSearchResponse instance,
+) =>
     <String, dynamic>{
       'articles': const NewsBlocksConverter().toJson(instance.articles),
       'topics': instance.topics,
