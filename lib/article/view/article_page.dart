@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_blocks_ui/news_blocks_ui.dart';
-import 'package:second/ads/ads.dart';
 import 'package:second/app/app.dart';
 import 'package:second/article/article.dart';
 import 'package:second/l10n/l10n.dart';
@@ -96,43 +95,41 @@ class ArticleView extends StatelessWidget {
       child: HasToShowInterstitialAdListener(
         interstitialAdBehavior: interstitialAdBehavior,
         child: HasReachedArticleLimitListener(
-          child: HasWatchedRewardedAdListener(
-            child: Scaffold(
-              backgroundColor: backgroundColor,
-              appBar: AppBar(
-                systemOverlayStyle: SystemUiOverlayStyle(
-                  statusBarIconBrightness:
-                      isVideoArticle ? Brightness.light : Brightness.dark,
-                  statusBarBrightness:
-                      isVideoArticle ? Brightness.dark : Brightness.light,
-                ),
-                leading: isVideoArticle
-                    ? AppBackButton.light(
-                        onPressed: () => _onBackButtonPressed(context),
-                      )
-                    : AppBackButton(
-                        onPressed: () => _onBackButtonPressed(context),
-                      ),
-                actions: [
-                  if (uri != null && uri.toString().isNotEmpty)
-                    Padding(
-                      key: const Key('articlePage_shareButton'),
-                      padding: const EdgeInsets.only(right: AppSpacing.lg),
-                      child: ShareButton(
-                        shareText: context.l10n.shareText,
-                        color: foregroundColor,
-                        onPressed: () => context
-                            .read<ArticleBloc>()
-                            .add(ShareRequested(uri: uri)),
-                      ),
+          child: Scaffold(
+            backgroundColor: backgroundColor,
+            appBar: AppBar(
+              systemOverlayStyle: SystemUiOverlayStyle(
+                statusBarIconBrightness:
+                    isVideoArticle ? Brightness.light : Brightness.dark,
+                statusBarBrightness:
+                    isVideoArticle ? Brightness.dark : Brightness.light,
+              ),
+              leading: isVideoArticle
+                  ? AppBackButton.light(
+                      onPressed: () => _onBackButtonPressed(context),
+                    )
+                  : AppBackButton(
+                      onPressed: () => _onBackButtonPressed(context),
                     ),
-                  if (!isSubscriber) const ArticleSubscribeButton(),
-                ],
-              ),
-              body: ArticleThemeOverride(
-                isVideoArticle: isVideoArticle,
-                child: const ArticleContent(),
-              ),
+              actions: [
+                if (uri != null && uri.toString().isNotEmpty)
+                  Padding(
+                    key: const Key('articlePage_shareButton'),
+                    padding: const EdgeInsets.only(right: AppSpacing.lg),
+                    child: ShareButton(
+                      shareText: context.l10n.shareText,
+                      color: foregroundColor,
+                      onPressed: () => context
+                          .read<ArticleBloc>()
+                          .add(ShareRequested(uri: uri)),
+                    ),
+                  ),
+                if (!isSubscriber) const ArticleSubscribeButton(),
+              ],
+            ),
+            body: ArticleThemeOverride(
+              isVideoArticle: isVideoArticle,
+              child: const ArticleContent(),
             ),
           ),
         ),
@@ -149,9 +146,9 @@ class ArticleView extends StatelessWidget {
     final state = context.read<ArticleBloc>().state;
     if (state.showInterstitialAd &&
         interstitialAdBehavior == InterstitialAdBehavior.onClose) {
-      context
-          .read<FullScreenAdsBloc>()
-          .add(const ShowInterstitialAdRequested());
+      // context
+      //     .read<FullScreenAdsBloc>()
+      //     .add(const ShowInterstitialAdRequested());
     }
   }
 }
@@ -198,27 +195,6 @@ class HasReachedArticleLimitListener extends StatelessWidget {
 }
 
 @visibleForTesting
-class HasWatchedRewardedAdListener extends StatelessWidget {
-  const HasWatchedRewardedAdListener({super.key, this.child});
-
-  final Widget? child;
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocListener<FullScreenAdsBloc, FullScreenAdsState>(
-      listener: (context, state) {
-        if (state.earnedReward != null) {
-          context.read<ArticleBloc>().add(const ArticleRewardedAdWatched());
-        }
-      },
-      listenWhen: (previous, current) =>
-          previous.earnedReward != current.earnedReward,
-      child: child,
-    );
-  }
-}
-
-@visibleForTesting
 class HasToShowInterstitialAdListener extends StatelessWidget {
   const HasToShowInterstitialAdListener({
     required this.child,
@@ -236,9 +212,9 @@ class HasToShowInterstitialAdListener extends StatelessWidget {
       listener: (context, state) {
         if (state.showInterstitialAd &&
             interstitialAdBehavior == InterstitialAdBehavior.onOpen) {
-          context
-              .read<FullScreenAdsBloc>()
-              .add(const ShowInterstitialAdRequested());
+          // context
+          //     .read<FullScreenAdsBloc>()
+          //     .add(const ShowInterstitialAdRequested());
         }
       },
       listenWhen: (previous, current) =>

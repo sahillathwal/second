@@ -1,7 +1,6 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:second/ads/ads.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/article/article.dart';
 import 'package:second/l10n/l10n.dart';
@@ -52,7 +51,6 @@ class ArticleContent extends StatelessWidget {
                 ],
               ),
             ),
-            const StickyAd(),
           ],
         ),
       ),

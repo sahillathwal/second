@@ -1,4 +1,3 @@
-import 'package:ads_consent_client/ads_consent_client.dart';
 import 'package:article_repository/article_repository.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,6 @@ import 'package:mockingjay/mockingjay.dart'
 import 'package:mocktail/mocktail.dart';
 import 'package:news_repository/news_repository.dart';
 import 'package:notifications_repository/notifications_repository.dart';
-import 'package:second/ads/ads.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/app/app.dart';
 import 'package:second/l10n/l10n.dart';
@@ -30,13 +28,6 @@ class MockThemeModeBloc extends MockBloc<ThemeModeEvent, ThemeMode>
     implements ThemeModeBloc {
   @override
   ThemeMode get state => ThemeMode.system;
-}
-
-class MockFullScreenAdsBloc
-    extends MockBloc<FullScreenAdsEvent, FullScreenAdsState>
-    implements FullScreenAdsBloc {
-  @override
-  FullScreenAdsState get state => const FullScreenAdsState.initial();
 }
 
 class MockUserRepository extends Mock implements UserRepository {
@@ -66,20 +57,16 @@ class MockArticleRepository extends Mock implements ArticleRepository {
 class MockInAppPurchaseRepository extends Mock
     implements InAppPurchaseRepository {}
 
-class MockAdsConsentClient extends Mock implements AdsConsentClient {}
-
 extension AppTester on WidgetTester {
   Future<void> pumpApp(
     Widget widgetUnderTest, {
     AppBloc? appBloc,
     AnalyticsBloc? analyticsBloc,
-    FullScreenAdsBloc? fullScreenAdsBloc,
     UserRepository? userRepository,
     NewsRepository? newsRepository,
     NotificationsRepository? notificationRepository,
     ArticleRepository? articleRepository,
     InAppPurchaseRepository? inAppPurchaseRepository,
-    AdsConsentClient? adsConsentClient,
     TargetPlatform? platform,
     ThemeModeBloc? themeModeBloc,
     NavigatorObserver? navigatorObserver,
@@ -103,18 +90,12 @@ extension AppTester on WidgetTester {
           RepositoryProvider.value(
             value: inAppPurchaseRepository ?? MockInAppPurchaseRepository(),
           ),
-          RepositoryProvider.value(
-            value: adsConsentClient ?? MockAdsConsentClient(),
-          ),
         ],
         child: MultiBlocProvider(
           providers: [
             BlocProvider.value(value: appBloc ?? MockAppBloc()),
             BlocProvider.value(value: analyticsBloc ?? MockAnalyticsBloc()),
             BlocProvider.value(value: themeModeBloc ?? MockThemeModeBloc()),
-            BlocProvider.value(
-              value: fullScreenAdsBloc ?? MockFullScreenAdsBloc(),
-            ),
           ],
           child: MaterialApp(
             title: 'second',

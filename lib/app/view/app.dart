@@ -1,17 +1,12 @@
-import 'package:ads_consent_client/ads_consent_client.dart';
 import 'package:analytics_repository/analytics_repository.dart';
 import 'package:app_ui/app_ui.dart';
 import 'package:article_repository/article_repository.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart' as ads;
 import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
-import 'package:news_blocks_ui/news_blocks_ui.dart';
 import 'package:news_repository/news_repository.dart';
 import 'package:notifications_repository/notifications_repository.dart';
-import 'package:platform/platform.dart';
-import 'package:second/ads/ads.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/app/app.dart';
 import 'package:second/l10n/l10n.dart';
@@ -27,7 +22,6 @@ class App extends StatelessWidget {
     required ArticleRepository articleRepository,
     required InAppPurchaseRepository inAppPurchaseRepository,
     required AnalyticsRepository analyticsRepository,
-    required AdsConsentClient adsConsentClient,
     required User user,
     super.key,
   })  : _userRepository = userRepository,
@@ -36,7 +30,6 @@ class App extends StatelessWidget {
         _articleRepository = articleRepository,
         _inAppPurchaseRepository = inAppPurchaseRepository,
         _analyticsRepository = analyticsRepository,
-        _adsConsentClient = adsConsentClient,
         _user = user;
 
   final UserRepository _userRepository;
@@ -45,7 +38,6 @@ class App extends StatelessWidget {
   final ArticleRepository _articleRepository;
   final InAppPurchaseRepository _inAppPurchaseRepository;
   final AnalyticsRepository _analyticsRepository;
-  final AdsConsentClient _adsConsentClient;
   final User _user;
 
   @override
@@ -58,7 +50,6 @@ class App extends StatelessWidget {
         RepositoryProvider.value(value: _articleRepository),
         RepositoryProvider.value(value: _analyticsRepository),
         RepositoryProvider.value(value: _inAppPurchaseRepository),
-        RepositoryProvider.value(value: _adsConsentClient),
       ],
       child: MultiBlocProvider(
         providers: [
@@ -81,17 +72,6 @@ class App extends StatelessWidget {
               analyticsRepository: _analyticsRepository,
               userRepository: _userRepository,
             ),
-            lazy: false,
-          ),
-          BlocProvider(
-            create: (context) => FullScreenAdsBloc(
-              interstitialAdLoader: ads.InterstitialAd.load,
-              rewardedAdLoader: ads.RewardedAd.load,
-              adsRetryPolicy: const AdsRetryPolicy(),
-              localPlatform: const LocalPlatform(),
-            )
-              ..add(const LoadInterstitialAdRequested())
-              ..add(const LoadRewardedAdRequested()),
             lazy: false,
           ),
         ],

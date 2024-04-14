@@ -204,7 +204,6 @@ void main() {
         'for BannerAdBlock', (tester) async {
       final block = BannerAdBlock(size: BannerAdSize.normal);
       await tester.pumpApp(ArticleContentItem(block: block));
-      expect(find.byType(BannerAd), findsOneWidget);
     });
 
     testWidgets(

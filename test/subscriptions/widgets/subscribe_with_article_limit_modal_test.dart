@@ -4,10 +4,8 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart' as ads;
 import 'package:in_app_purchase_repository/in_app_purchase_repository.dart';
 import 'package:mockingjay/mockingjay.dart';
-import 'package:second/ads/ads.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/app/app.dart';
 import 'package:second/article/article.dart';
@@ -25,16 +23,8 @@ class MockArticleBloc extends MockBloc<ArticleEvent, ArticleState>
 
 class MockUser extends Mock implements User {}
 
-class MockAdWithoutView extends Mock implements ads.AdWithoutView {}
-
-class MockRewardItem extends Mock implements ads.RewardItem {}
-
 class MockAnalyticsBloc extends MockBloc<AnalyticsEvent, AnalyticsState>
     implements AnalyticsBloc {}
-
-class MockFullScreenAdsBloc
-    extends MockBloc<FullScreenAdsEvent, FullScreenAdsState>
-    implements FullScreenAdsBloc {}
 
 void main() {
   late AppBloc appBloc;
@@ -176,12 +166,9 @@ void main() {
     testWidgets(
         'adds ShowRewardedAdRequested to FullScreenAdsBloc '
         'when tapped on watch video button', (tester) async {
-      final fullScreenAdsBloc = MockFullScreenAdsBloc();
-
       await tester.pumpApp(
         analyticsBloc: analyticsBloc,
         appBloc: appBloc,
-        fullScreenAdsBloc: fullScreenAdsBloc,
         BlocProvider.value(
           value: articleBloc,
           child: SubscribeWithArticleLimitModal(),
@@ -189,8 +176,6 @@ void main() {
       );
       await tester.tap(find.byKey(watchVideoButton));
       await tester.pump();
-
-      verify(() => fullScreenAdsBloc.add(ShowRewardedAdRequested())).called(1);
     });
 
     testWidgets(

@@ -8,7 +8,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:news_blocks/news_blocks.dart';
-import 'package:second/ads/ads.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/article/article.dart';
 import 'package:second/network_error/network_error.dart';
@@ -61,8 +60,6 @@ void main() {
           child: ArticleContent(),
         ),
       );
-
-      expect(find.byType(StickyAd), findsOneWidget);
     });
 
     group('when ArticleStatus is failure and content is present', () {

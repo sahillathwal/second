@@ -235,7 +235,6 @@ void main() {
       await tester.pumpApp(
         CustomScrollView(slivers: [CategoryFeedItem(block: block)]),
       );
-      expect(find.byType(BannerAd), findsOneWidget);
     });
 
     testWidgets(

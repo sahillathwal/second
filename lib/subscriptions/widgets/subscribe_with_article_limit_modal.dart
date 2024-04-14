@@ -2,7 +2,6 @@ import 'package:app_ui/app_ui.dart'
     show AppButton, AppColors, AppSpacing, Assets, showAppModal;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:second/ads/ads.dart';
 import 'package:second/analytics/analytics.dart';
 import 'package:second/app/app.dart';
 import 'package:second/article/article.dart';
@@ -127,9 +126,7 @@ class _SubscribeWithArticleLimitModalState
                   key: const Key(
                     'subscribeWithArticleLimitModal_watchVideoButton',
                   ),
-                  onPressed: () => context
-                      .read<FullScreenAdsBloc>()
-                      .add(const ShowRewardedAdRequested()),
+                  onPressed: () => context,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
