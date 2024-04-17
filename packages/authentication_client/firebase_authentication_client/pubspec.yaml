@@ -10,7 +10,7 @@ dependencies:
   authentication_client:
     path: ../authentication_client
   firebase_auth: ^4.16.0
-  firebase_auth_platform_interface: ^7.0.9
+  firebase_auth_platform_interface: ^7.2.3
   firebase_core: ^2.24.2
   firebase_core_platform_interface: ^5.0.0
   flutter:
