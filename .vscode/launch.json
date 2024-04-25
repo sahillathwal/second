@@ -4,7 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "development",
             "request": "launch",
@@ -16,7 +15,7 @@
                 "--target",
                 "lib/main/main_development.dart",
                 "--dart-define",
-                "FLAVOR_DEEP_LINK_DOMAIN=",
+                "FLAVOR_DEEP_LINK_DOMAIN=testsecond1.page.link",
                 "--dart-define",
                 "FLAVOR_DEEP_LINK_PATH=email_login",
                 "--dart-define",
@@ -27,7 +26,6 @@
                 "TWITTER_REDIRECT_URI=second://"
             ]
         },
-        
         {
             "name": "production",
             "request": "launch",
@@ -39,7 +37,7 @@
                 "--target",
                 "lib/main/main_production.dart",
                 "--dart-define",
-                "FLAVOR_DEEP_LINK_DOMAIN=",
+                "FLAVOR_DEEP_LINK_DOMAIN=testsecond1.page.link",
                 "--dart-define",
                 "FLAVOR_DEEP_LINK_PATH=email_login",
                 "--dart-define",
@@ -50,7 +48,6 @@
                 "TWITTER_REDIRECT_URI=second://"
             ]
         },
-        
         {
             "name": "Launch UI Gallery",
             "request": "launch",
